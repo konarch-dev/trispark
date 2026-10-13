@@ -1,0 +1,293 @@
+[
+  {
+    "id": "PHJ-138924",
+    "title": "Registered Nurse - Medical / Surgical",
+    "industry": "Medical Solutions",
+    "workModel": "On-site",
+    "employmentType": "Full-time / Contract",
+    "location": "New York, NY",
+    "state": "NY",
+    "city": "New York",
+    "country": "USA",
+    "postalCode": "10037",
+    "facility": "Harlem Hospital Center",
+    "department": "Inpatient Med/Surg",
+    "salary": "$95,000 - $115,000 / year",
+    "postedDate": "2 days ago",
+    "featured": true,
+    "summary": "We are seeking a compassionate and dedicated Registered Nurse (RN) for our Medical/Surgical unit. The ideal candidate provides high-quality bedside patient care, administers medications, monitors vitals, and collaborates with multidisciplinary healthcare teams.",
+    "responsibilities": [
+      "Assess, plan, implement, and evaluate patient care plans in accordance with hospital standards.",
+      "Administer IV therapies, medications, and treatments accurately while observing patient responses.",
+      "Collaborate closely with physicians, nurse specialists, and therapists to coordinate discharge planning.",
+      "Maintain rigorous patient charting, infection control, and sterile procedures.",
+      "Educate patients and their family members regarding treatment plans and post-discharge recovery."
+    ],
+    "qualifications": [
+      "Active and unrestricted RN license in New York State.",
+      "Minimum of 1-2 years acute care or Med/Surg hospital experience.",
+      "Current BLS (Basic Life Support) and ACLS certifications from AHA.",
+      "Strong clinical communication, critical thinking, and patient advocacy skills."
+    ]
+  },
+  {
+    "id": "PHJ-139196",
+    "title": "LPN 1 - Urology Clinic",
+    "industry": "Medical Solutions",
+    "workModel": "On-site",
+    "employmentType": "Full-time",
+    "location": "Wilmington, DE",
+    "state": "DE",
+    "city": "Wilmington",
+    "country": "USA",
+    "postalCode": "19801",
+    "facility": "ChristianaCare Outpatient Center",
+    "department": "Specialty Care Clinic",
+    "salary": "$62,000 - $72,000 / year",
+    "postedDate": "3 days ago",
+    "featured": true,
+    "summary": "Exciting outpatient opportunity for a Licensed Practical Nurse (LPN) to support daily clinical operations, patient intake, procedural prep, and follow-up care in a thriving urology clinic.",
+    "responsibilities": [
+      "Perform initial patient triage, capture vitals, and document patient medical histories.",
+      "Assist attending urologists with in-office minor surgical procedures and cystoscopies.",
+      "Handle catheterizations, bladder scans, and specimen collections with strict sterile technique.",
+      "Coordinate prescription prior authorizations and phone triage for patient inquiries."
+    ],
+    "qualifications": [
+      "Active Delaware or Multi-State Compact LPN License.",
+      "BLS certification required.",
+      "1+ year clinical outpatient experience preferred."
+    ]
+  },
+  {
+    "id": "PHJ-138542",
+    "title": "Senior Full Stack Software Engineer (React / Node.js)",
+    "industry": "IT Services",
+    "workModel": "Remote",
+    "employmentType": "Full-time",
+    "location": "Remote, USA",
+    "state": "DE",
+    "city": "Claymont",
+    "country": "USA",
+    "postalCode": "19703",
+    "facility": "Enterprise Cloud Platform",
+    "department": "Engineering",
+    "salary": "$135,000 - $160,000 / year",
+    "postedDate": "1 day ago",
+    "featured": true,
+    "summary": "Lead the architecture and delivery of modern web applications, scalable REST/GraphQL APIs, and cloud services for high-velocity enterprise talent and staffing systems.",
+    "responsibilities": [
+      "Design, build, and maintain high-performance frontend interfaces with React, Next.js, and TypeScript.",
+      "Develop secure microservices with Node.js, Express/NestJS, PostgreSQL, and Redis.",
+      "Automate CI/CD pipelines, containerized deployments on AWS/Azure, and infrastructure as code.",
+      "Mentor mid-level engineers, drive code review standards, and optimize app performance."
+    ],
+    "qualifications": [
+      "5+ years of software engineering experience in modern JavaScript/TypeScript ecosystems.",
+      "Deep knowledge of React state management, hooks, and responsive UX design systems.",
+      "Proficiency in REST/GraphQL API design, SQL database modeling, and caching architectures.",
+      "Bachelor’s degree in Computer Science, Software Engineering, or equivalent experience."
+    ]
+  },
+  {
+    "id": "PHJ-138620",
+    "title": "Financial Analyst - Risk & Compliance",
+    "industry": "BFSI",
+    "workModel": "Hybrid",
+    "employmentType": "Full-time",
+    "location": "New York, NY",
+    "state": "NY",
+    "city": "New York",
+    "country": "USA",
+    "postalCode": "10005",
+    "facility": "Global Investment Banking Client",
+    "department": "Risk Management",
+    "salary": "$110,000 - $130,000 / year",
+    "postedDate": "4 days ago",
+    "featured": false,
+    "summary": "Support quantitative risk evaluation, portfolio stress testing, regulatory audits, and financial forecasting for tier-one banking institutions.",
+    "responsibilities": [
+      "Build robust financial models to evaluate credit, liquidity, and operational risk metrics.",
+      "Prepare quarterly compliance documentation for SEC, FINRA, and Federal Reserve guidelines.",
+      "Collaborate with asset management teams to monitor covenant compliance and risk caps.",
+      "Automate monthly reconciliation reports using Excel VBA, Python, and SQL."
+    ],
+    "qualifications": [
+      "Bachelor’s degree in Finance, Accounting, Economics, or Quantitative Analytics.",
+      "3+ years experience in banking, hedge fund, or institutional financial analysis.",
+      "CFA or FRM candidacy strongly preferred."
+    ]
+  },
+  {
+    "id": "PHJ-138711",
+    "title": "Clinical Research Associate (CRA)",
+    "industry": "Pharma, Biotech & Medical Devices",
+    "workModel": "Hybrid",
+    "employmentType": "Full-time",
+    "location": "Philadelphia, PA",
+    "state": "PA",
+    "city": "Philadelphia",
+    "country": "USA",
+    "postalCode": "19104",
+    "facility": "Biopharma Clinical Trials Group",
+    "department": "Clinical Operations",
+    "salary": "$90,000 - $115,000 / year",
+    "postedDate": "5 days ago",
+    "featured": false,
+    "summary": "Monitor Phase II and Phase III clinical trial sites to ensure protocol adherence, Good Clinical Practice (GCP) compliance, and accurate electronic data capture.",
+    "responsibilities": [
+      "Conduct site qualification, initiation, routine interim monitoring, and close-out visits.",
+      "Verify patient informed consent forms, eligibility verification, and source data verification (SDV).",
+      "Track adverse events (AEs) and serious adverse events (SAEs) with prompt institutional reporting.",
+      "Liaise between principal investigators, hospital research boards, and sponsor trial directors."
+    ],
+    "qualifications": [
+      "Bachelor’s degree in Life Sciences, Nursing, or related scientific discipline.",
+      "2+ years onsite or regional monitoring experience in oncology or infectious diseases.",
+      "CCRA or ACRP certification is an advantage."
+    ]
+  },
+  {
+    "id": "PHJ-138805",
+    "title": "Supply Chain Logistics Coordinator",
+    "industry": "Supply Chain Management",
+    "workModel": "On-site",
+    "employmentType": "Full-time",
+    "location": "Newark, NJ",
+    "state": "NJ",
+    "city": "Newark",
+    "country": "USA",
+    "postalCode": "07102",
+    "facility": "Regional Distribution Hub",
+    "department": "Supply Chain & Fulfillment",
+    "salary": "$68,000 - $78,000 / year",
+    "postedDate": "6 days ago",
+    "featured": false,
+    "summary": "Oversee inbound and outbound freight scheduling, freight forwarder coordination, inventory tracking, and warehouse operations.",
+    "responsibilities": [
+      "Coordinate multi-modal shipments (air, ocean, drayage, LTL/FTL) across North American hubs.",
+      "Audit freight bills, customs clearance documents, and bills of lading for compliance.",
+      "Track real-time inventory movements in ERP/WMS systems (SAP, Oracle).",
+      "Resolve logistics exceptions and shipping delays proactively with carriers."
+    ],
+    "qualifications": [
+      "Associate or Bachelor’s degree in Supply Chain, Business, or Logistics.",
+      "2+ years logistics dispatch or freight coordination experience."
+    ]
+  },
+  {
+    "id": "PHJ-139137",
+    "title": "Store Associate / Inventory Specialist",
+    "industry": "Food & Beverage",
+    "workModel": "On-site",
+    "employmentType": "Part-time",
+    "location": "Claymont, DE",
+    "state": "DE",
+    "city": "Claymont",
+    "country": "USA",
+    "postalCode": "19703",
+    "facility": "Trispark Commercial Partner Facility",
+    "department": "Store Operations",
+    "salary": "$18 - $22 / hour",
+    "postedDate": "Just now",
+    "featured": true,
+    "summary": "Provide enthusiastic customer assistance, restock shelves, inspect perishable inventory, and process point-of-sale transactions.",
+    "responsibilities": [
+      "Greet store patrons and guide them to products with polite and attentive service.",
+      "Receive freight deliveries, inspect product expiration dates, and arrange display shelves.",
+      "Operate digital cash registers and handle credit card/cash transactions accurately.",
+      "Maintain store cleanliness, sanitation protocols, and aisle safety."
+    ],
+    "qualifications": [
+      "High school diploma or GED equivalent.",
+      "Prior retail, grocery, or hospitality customer service experience welcomed.",
+      "Ability to lift up to 35 lbs and stay active throughout the shift."
+    ]
+  },
+  {
+    "id": "PHJ-138990",
+    "title": "Telecom Systems Engineer",
+    "industry": "Telecommunication",
+    "workModel": "Hybrid",
+    "employmentType": "Contract",
+    "location": "Dallas, TX",
+    "state": "TX",
+    "city": "Dallas",
+    "country": "USA",
+    "postalCode": "75201",
+    "facility": "5G Infrastructure Operations",
+    "department": "Network Operations",
+    "salary": "$65 - $80 / hour",
+    "postedDate": "1 week ago",
+    "featured": false,
+    "summary": "Deploy, test, and optimize next-generation optical transmission and 5G cellular base station equipment for telecommunication operators.",
+    "responsibilities": [
+      "Configure DWDM, microwave backhaul, and carrier Ethernet switches.",
+      "Execute fiber characterization testing (OTDR, chromatic dispersion, PMD).",
+      "Analyze drive test metrics and tune RF handover parameters for high-traffic cell sites.",
+      "Prepare network cutover migration plans and coordinate emergency outage recovery."
+    ],
+    "qualifications": [
+      "Bachelor of Science in Electrical Engineering, Telecommunications, or Computer Networks.",
+      "3+ years telecom field or NOC engineering experience.",
+      "CCNA/CCNP Service Provider or equivalent OEM certifications preferred."
+    ]
+  },
+  {
+    "id": "PHJ-139220",
+    "title": "Construction Project Safety Manager",
+    "industry": "Construction, Energy & Utility",
+    "workModel": "On-site",
+    "employmentType": "Full-time",
+    "location": "Houston, TX",
+    "state": "TX",
+    "city": "Houston",
+    "country": "USA",
+    "postalCode": "77002",
+    "facility": "Infrastructure & Solar Project Site",
+    "department": "EHS (Environmental Health & Safety)",
+    "salary": "$105,000 - $125,000 / year",
+    "postedDate": "3 days ago",
+    "featured": false,
+    "summary": "Drive workplace safety leadership across utility-scale energy construction projects, ensuring OSHA compliance and zero-incident site culture.",
+    "responsibilities": [
+      "Conduct daily job hazard assessments, toolbox talks, and site audits across subcontractors.",
+      "Enforce OSHA 1926 construction regulations and environmental permit conditions.",
+      "Investigate near-misses and incidents to establish root cause and corrective measures.",
+      "Manage safety documentation, certifications, and local authority inspections."
+    ],
+    "qualifications": [
+      "5+ years safety leadership in commercial construction or energy utility projects.",
+      "OSHA 30 Construction and CSP or CHST certification.",
+      "Bilingual English/Spanish is a plus."
+    ]
+  },
+  {
+    "id": "PHJ-139305",
+    "title": "Automotive Quality Assurance Engineer",
+    "industry": "Automobile Industry",
+    "workModel": "On-site",
+    "employmentType": "Full-time",
+    "location": "Detroit, MI",
+    "state": "MI",
+    "city": "Detroit",
+    "country": "USA",
+    "postalCode": "48226",
+    "facility": "EV Powertrain Assembly Plant",
+    "department": "Quality Engineering",
+    "salary": "$88,000 - $108,000 / year",
+    "postedDate": "5 days ago",
+    "featured": false,
+    "summary": "Lead PPAP validations, root-cause investigations, and APQP product launch milestones for electric vehicle battery and motor components.",
+    "responsibilities": [
+      "Implement Statistical Process Control (SPC) and Gage R&R studies on manufacturing lines.",
+      "Lead 8D corrective actions for supplier defects and assembly discrepancies.",
+      "Collaborate with design engineers on GD&T tolerances and DFM recommendations."
+    ],
+    "qualifications": [
+      "Bachelor’s in Mechanical, Industrial, or Automotive Engineering.",
+      "3+ years automotive Tier-1 or OEM quality engineering experience.",
+      "Six Sigma Green Belt or CQE certification preferred."
+    ]
+  }
+]

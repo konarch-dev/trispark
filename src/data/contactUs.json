@@ -1,0 +1,40 @@
+{
+  "title": "Contact Us - Trispark",
+  "desc": "Leading staffing and recruiting company specializing in Tech, Healthcare, IT Services, and Cross-Industry talent acquisition. Connect with top professionals across Medical Solutions, Pharmaceuticals, BFSI, and more.",
+  "blocks": [
+    {
+      "type": "p",
+      "text": "Let&#x27;s talk with us"
+    },
+    {
+      "type": "h1",
+      "text": "Get in touch Love to hear from you ."
+    },
+    {
+      "type": "h2",
+      "text": "Our address"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Trispark(Trispark)2093 Philadelphia Pike #9086,Claymont, DE 19703, USA"
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Contact Info"
+    },
+    {
+      "type": "h2",
+      "text": "Follow us"
+    },
+    {
+      "type": "p",
+      "text": "Your mobile information will not be sold or shared with third parties for promotional or marketing purposes. See our Privacy Policy and SMS Terms ."
+    },
+    {
+      "type": "p",
+      "text": "I agree to the Terms &amp; Conditions and Privacy Policy . *"
+    }
+  ]
+}
