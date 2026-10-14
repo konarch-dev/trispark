@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Award, TrendingUp, Target, Users, Search, CheckCircle2, CalendarCheck, Sparkles } from 'lucide-react';
 import { useModal } from '../context/ModalContext';
 import testimonialsData from '../data/testimonials.json';
 
@@ -64,6 +65,126 @@ const ROLES_LIST = [
   'Telecommunication',
 ];
 
+const CORE_SERVICES = [
+  {
+    title: 'Contract Staffing',
+    description:
+      'Qualified professionals engaged on a flexible basis to support project requirements, temporary skill gaps, and changing workforce needs.',
+    linkText: 'Explore Contract Staffing',
+    link: '/services/contract-staffing',
+    image: '/assets/images/services/contract-staffing.jpg',
+  },
+  {
+    title: 'Permanent Staffing',
+    description:
+      'Qualified professionals for permanent positions across technical, professional, and business functions.',
+    linkText: 'Explore Permanent Staffing',
+    link: '/services/permanent-staffing',
+    image: '/assets/images/services/permanent-staffing.jpg',
+  },
+  {
+    title: 'Executive Search & Leadership Hiring',
+    description:
+      'Experienced executives and senior leaders for positions where expertise, leadership, and organizational impact are critical.',
+    linkText: 'Explore Executive Search & Leadership Hiring',
+    link: '/services/executive-search',
+    image: '/assets/images/services/executive-search.jpg',
+  },
+  {
+    title: 'AI Services',
+    description:
+      'AI expertise for automation, intelligent workflows, implementation, and emerging technology initiatives.',
+    linkText: 'Explore AI Services',
+    link: '/services/ai-services',
+    image: '/assets/images/services/ai-services.jpg',
+  },
+];
+
+const INDUSTRIES_WE_SERVE = [
+  {
+    id: 'technology',
+    name: 'Technology',
+    desc: 'Software, Cloud, AI, Data, Cybersecurity, Infrastructure, and Technology Leadership.',
+    url: '/industries/it-services',
+    image: '/assets/images/industry-technology.webp',
+    color: '#1f9ede',
+  },
+  {
+    id: 'healthcare',
+    name: 'Healthcare',
+    desc: 'Nursing, Allied, Locums, Operations, Technology, and More.',
+    url: '/industries/medical-solutions',
+    image: '/assets/images/industry-healthcare.webp',
+    color: '#8e2d8c',
+  },
+  {
+    id: 'food-and-beverages',
+    name: 'Food & Beverages',
+    desc: 'Food Production, Quality Assurance, Food Safety, Plant Operations, and Packaging.',
+    url: '/industries/food-and-beverage',
+    image: '/assets/images/industry-food.webp',
+    color: '#f2a93b',
+  },
+  {
+    id: 'engineering',
+    name: 'Engineering',
+    desc: 'Mechanical, Electrical, Civil, Design, Project, and Technical Engineering Roles.',
+    url: '/industries/construction-energy-and-utility',
+    image: '/assets/images/indhub-engineering.webp',
+    color: '#1f9ede',
+  },
+  {
+    id: 'retail-and-supply-chain',
+    name: 'Retail & Supply Chain',
+    desc: 'Retail Operations, Digital Commerce, Procurement, Logistics, Distribution, and Transportation.',
+    url: '/industries/supply-chain-management',
+    image: '/assets/images/industry-retail.webp',
+    color: '#8e2d8c',
+  },
+  {
+    id: 'manufacturing',
+    name: 'Manufacturing',
+    desc: 'Production, Operations, Quality, Automation, and Industrial Functions.',
+    url: '/industries',
+    image: '/assets/images/industry-manufacturing.webp',
+    color: '#f2a93b',
+  },
+];
+
+const PROCESS_STEPS = [
+  {
+    title: 'Requirements Discovery',
+    desc: 'Align on roles and responsibilities, core competencies, compensation, and hiring timelines to establish a targeted recruitment strategy.',
+    color: '#1f9ede',
+    icon: Search,
+  },
+  {
+    title: 'Talent Sourcing',
+    desc: 'Combine talent mapping, proactive sourcing, and targeted outreach to engage qualified, available candidates.',
+    color: '#8e2d8c',
+    icon: Users,
+  },
+  {
+    title: 'Screening & Qualification',
+    desc: 'Evaluate skills and credentials, relevant experience, and organizational fit to deliver a qualified candidate shortlist.',
+    color: '#f2a93b',
+    icon: CheckCircle2,
+  },
+  {
+    title: 'Interview & Offer Management',
+    desc: 'Coordinate interviews, consolidate feedback, and facilitate offer negotiation and acceptance.',
+    color: '#1f9ede',
+    icon: CalendarCheck,
+  },
+  {
+    title: 'Onboarding & Engagement',
+    desc: 'Support onboarding readiness and conduct post-placement follow-ups to strengthen retention and client satisfaction.',
+    color: '#e343b6',
+    icon: Sparkles,
+    highlightTitle: true,
+  },
+];
+
 export default function Home() {
   const { showToast } = useModal();
 
@@ -77,6 +198,18 @@ export default function Home() {
     return () => clearInterval(timer);
   }, []);
 
+  // Industries We Serve Interactive Carousel State
+  const [activeIndustryIdx, setActiveIndustryIdx] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveIndustryIdx((prev) => (prev + 1) % INDUSTRIES_WE_SERVE.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, [activeIndustryIdx]);
+
+  const activeIndustry = INDUSTRIES_WE_SERVE[activeIndustryIdx] || INDUSTRIES_WE_SERVE[0];
+
   // Submit Resume Form State
   const [formData, setFormData] = useState({
     name: '',
@@ -89,11 +222,23 @@ export default function Home() {
   const [resumeFile, setResumeFile] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Testimonials Carousel State
+  // Testimonials Carousel State with Auto Carousel
   const [currentReviewIdx, setCurrentReviewIdx] = useState(0);
   const [expandedQuote, setExpandedQuote] = useState(false);
+  const [isTestimonialPaused, setIsTestimonialPaused] = useState(false);
 
   const activeReview = testimonialsData[currentReviewIdx] || testimonialsData[0];
+
+  useEffect(() => {
+    if (isTestimonialPaused || expandedQuote || !testimonialsData || testimonialsData.length <= 1) {
+      return;
+    }
+    const timer = setInterval(() => {
+      setExpandedQuote(false);
+      setCurrentReviewIdx((prev) => (prev + 1) % testimonialsData.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [isTestimonialPaused, expandedQuote, currentReviewIdx]);
 
   const handleFileChange = (e) => {
     if (e.target.files && e.target.files[0]) {
@@ -178,13 +323,13 @@ export default function Home() {
               <div className="container w-full space-y-8">
                 <h1 className="max-w-7xl">
                   <span className="title inline-block align-top text-balance">
-                    Welcome to&nbsp;<span className="text-gradient">Trispark</span>&nbsp;Your Talent Acquisition Partner.
+                    Welcome to&nbsp;<span className="text-gradient">Trispark</span>&nbsp;Talent That Moves Business Forward.
                   </span>
-                  <span className="sr-only">Welcome to Trispark Your Talent Acquisition Partner.</span>
+                  <span className="sr-only">Welcome to Trispark Talent That Moves Business Forward.</span>
                 </h1>
 
                 <p className="text-muted-foreground max-w-xl text-balance md:max-w-3xl">
-                  We specialize in connecting businesses with exceptional talent that aligns perfectly with your unique needs. Our expert recruitment team understands the intricacies of your industry and the importance of finding candidates who not only possess the right skills but also fit seamlessly into your company culture. Discover a new way of hiring that's tailored, efficient, and effective. Let's shape success together.
+                  Trispark connects businesses with skilled professionals across technology, business operations, and specialized functions, from contract staffing to executive leadership.
                 </p>
 
                 <div className="flex flex-col gap-4 md:flex-row">
@@ -193,8 +338,15 @@ export default function Home() {
                     className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow-sm hover:bg-primary/90 h-9 px-4 py-2"
                     href="/jobs"
                   >
-                    Apply Now &amp; Get Hired
-                    <span className="sr-only">Apply now</span>
+                    Find Work &rarr;
+                    <span className="sr-only">Find Work &rarr;</span>
+                  </a> <a
+                    aria-label="Contact Us"
+                    className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/90 h-9 px-4 py-2"
+                    href="/jobs"
+                  >
+                    Hire Talent &rarr;
+                    <span className="sr-only">Hire Talent &rarr;</span>
                   </a>
                 </div>
 
@@ -343,110 +495,320 @@ export default function Home() {
       {/* 2. WHO WE ARE SECTION */}
       <section id="who-we-are" className="bg-gray-50 py-20">
         <div className="container">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center">
             <div className="order-2 space-y-6 lg:order-1">
-              <div className="mx-auto w-full space-y-4 lg:max-w-3xl">
-                <p className="text-gradient leading-6 font-semibold">Who we are?</p>
-                <h1 className="font-serif text-3xl font-bold tracking-tight sm:text-4xl">
-                  Discover the Essence of <span className="text-gradient">Trispark</span>
+              <div className="mx-auto w-full space-y-3 lg:max-w-3xl">
+                <p className="text-gradient leading-6 font-semibold">
+                  20+ Years of leadership in staffing and recruiting
+                </p>
+                <h2 className="font-serif text-3xl font-bold tracking-tight sm:text-4xl text-slate-900">
+                  Staffing{' '}
+                  <span className="text-gradient">Expertise</span>
                   <br />
-                  Shaping Futures Through Strategic Connections
-                </h1>
+                  You Can Rely On.
+                </h2>
               </div>
-              <div className="text-muted-foreground space-y-6">
-                <p>
-                  At <span className="text-gradient font-medium">Trispark</span>, we transcend traditional recruitment norms to redefine your path to success. We pride ourselves on being more than just a recruitment company, we are your dedicated strategic partner in navigating the dynamic landscape of talent acquisition. With an unwavering commitment to excellence, we employ cutting-edge data analytics and insights to identify Trispark that connect exceptional candidates with transformative opportunities.
+              <div className="space-y-6">
+                <p className="text-slate-600 leading-relaxed text-base">
+                  <span className="text-gradient font-semibold">Trispark</span> brings more than 20 years of leadership experience across staffing, recruiting, and workforce solutions to help businesses find the people they need. We work with organizations to understand workforce requirements, identify qualified professionals, and support hiring from the initial requirement through placement. Our approach combines experienced leadership, targeted recruiting, and a clear understanding of the business behind every hiring requirement.
                 </p>
-                <p>
-                  Our approach goes beyond matching skills with job descriptions - we delve deep into understanding the unique DNA of both candidates and businesses. By recognizing the intricate interplay of expertise, culture, and aspirations, we curate partnerships that flourish in the long term. Trispark is your beacon of guidance, illuminating a new way forward in recruitment, where talent meets innovation and potential finds purpose. Join us in shaping a future where success is built on the art of Trispark.
-                </p>
-                <ul role="list" className="grid grid-cols-2 gap-2 md:grid-cols-3 md:pb-6">
-                  {['Strategic', 'Connection', 'Insightful', 'Innovative', 'Tailored', 'Empowering'].map((item) => (
-                    <li key={item} className="flex items-center gap-1">
-                      <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 shrink-0 text-yellow-500">
-                        <path d="M9.875 7.5C9.875 8.81168 8.81168 9.875 7.5 9.875C6.18832 9.875 5.125 8.81168 5.125 7.5C5.125 6.18832 6.18832 5.125 7.5 5.125C8.81168 5.125 9.875 6.18832 9.875 7.5Z" fill="currentColor" />
-                      </svg>
-                      <span className="text-green-600">{item}</span>
-                    </li>
-                  ))}
-                </ul>
+
+                <div className="space-y-4 pt-1">
+                  <h3 className="font-serif text-lg font-bold text-slate-900 tracking-tight">
+                    What Trispark Brings to the Table
+                  </h3>
+                  <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2">
+                    <div className="group rounded-xl border border-slate-200/80 bg-white p-4 shadow-2xs transition-all hover:border-blue-400/80 hover:shadow-xs">
+                      <div className="flex items-start gap-3">
+                        <div className="rounded-lg bg-blue-50 p-2 text-primary shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+                          <Award className="h-5 w-5" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-slate-900 text-sm leading-snug">
+                            20+ Years of Leadership Experience
+                          </h4>
+                          <p className="mt-1 text-xs text-muted-foreground leading-relaxed">
+                            Experienced leadership across staffing, recruiting, workforce solutions, and talent acquisition.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="group rounded-xl border border-slate-200/80 bg-white p-4 shadow-2xs transition-all hover:border-blue-400/80 hover:shadow-xs">
+                      <div className="flex items-start gap-3">
+                        <div className="rounded-lg bg-blue-50 p-2 text-primary shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+                          <TrendingUp className="h-5 w-5" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-slate-900 text-sm leading-snug">
+                            Talent Market Intelligence
+                          </h4>
+                          <p className="mt-1 text-xs text-muted-foreground leading-relaxed">
+                            An understanding of hiring requirements, talent markets, and workforce expectations across industries.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="group rounded-xl border border-slate-200/80 bg-white p-4 shadow-2xs transition-all hover:border-blue-400/80 hover:shadow-xs">
+                      <div className="flex items-start gap-3">
+                        <div className="rounded-lg bg-blue-50 p-2 text-primary shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+                          <Target className="h-5 w-5" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-slate-900 text-sm leading-snug">
+                            Targeted Sourcing
+                          </h4>
+                          <p className="mt-1 text-xs text-muted-foreground leading-relaxed">
+                            Recruiting focused on the skills, experience, location, seniority, and requirements of each position.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="group rounded-xl border border-slate-200/80 bg-white p-4 shadow-2xs transition-all hover:border-blue-400/80 hover:shadow-xs">
+                      <div className="flex items-start gap-3">
+                        <div className="rounded-lg bg-blue-50 p-2 text-primary shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+                          <Users className="h-5 w-5" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-slate-900 text-sm leading-snug">
+                            Flexible Workforce Solutions
+                          </h4>
+                          <p className="mt-1 text-xs text-muted-foreground leading-relaxed">
+                            Staffing and recruiting solutions that support immediate workforce requirements, long term hiring, and leadership appointments.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
               </div>
             </div>
-            <img
-              alt="Trispark"
-              width="1440"
-              height="960"
-              decoding="async"
-              className="order-1 h-full overflow-hidden rounded-md object-cover object-center lg:order-2"
-              style={{ color: 'transparent' }}
-              src="https://vihav.com/images/project-images/projects/supremus-project-images/gallery/supremus-gallery-image-3.webp"
-            />
+
+            <div className="order-1 lg:order-2 flex items-stretch">
+              <img
+                alt="Trispark Leadership"
+                width="1440"
+                height="960"
+                decoding="async"
+                className="h-full w-full overflow-hidden rounded-2xl object-cover object-center shadow-lg border border-slate-200/80 min-h-[380px] lg:min-h-full"
+                style={{ color: 'transparent' }}
+                src="https://vihav.com/images/project-images/projects/supremus-project-images/gallery/supremus-gallery-image-3.webp"
+              />
+            </div>
           </div>
         </div>
       </section>
 
       {/* 3. SERVICES SECTION */}
-      <section id="services">
-        <div className="container space-y-24">
-          <div className="space-y-4 text-center">
+      <section id="services" className="py-20 lg:py-28 bg-white">
+        <div className="container space-y-10">
+          <div className="space-y-2">
             <p className="text-gradient leading-6 font-semibold">Services We Provide</p>
-            <h1 className="font-serif text-3xl font-bold tracking-tight sm:text-4xl">
-              We Deliver End to End <span className="text-gradient">Solutions</span>
-            </h1>
+            <h2 className="font-serif text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+              Our Core <span className="text-gradient">Services</span>
+            </h2>
           </div>
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-            {/* Workforce Solutions */}
-            <div className="group flex flex-col overflow-hidden rounded-md border">
-              <Link className="shrink-0" to="/services/workforce-solutions">
-                <img
-                  alt="Workforce Solutions"
-                  width="0"
-                  height="0"
-                  decoding="async"
-                  className="aspect-video w-full object-cover"
-                  style={{ color: 'transparent' }}
-                  src="https://www.patternshiring.com/assets/images/posts/services/workforce-solutions.jpg"
-                />
-              </Link>
-              <Link className="flex flex-col justify-between p-8 transition-all group-hover:bg-primary-foreground" to="/services/workforce-solutions">
-                <p className="text-gradient font-semibold">Service</p>
-                <h1 className="font-serif text-2xl font-extrabold transition-all group-hover:text-primary lg:text-4xl">
-                  Workforce Solutions
-                </h1>
-                <p className="mt-3 line-clamp-3 text-muted-foreground">
-                  Whether you face these generic workforce challenges or have specialized needs based on your industry requirements or business model, Trispark is the one-stop workforce solutions provider you are looking for.
-                </p>
+
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {CORE_SERVICES.map((srv) => (
+              <div
+                key={srv.title}
+                className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-xs transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-primary/40"
+              >
+                <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
+                  <img
+                    alt={srv.title}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    src={srv.image}
+                  />
+                </div>
+
+                <div className="flex flex-1 flex-col justify-between p-6">
+                  <div>
+                    <h3 className="font-serif text-lg sm:text-xl font-bold text-slate-900 leading-snug">
+                      {srv.title}
+                    </h3>
+                    <p className="mt-2.5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                      {srv.description}
+                    </p>
+                  </div>
+
+                  <div className="mt-6 pt-2">
+                    <Link
+                      to={srv.link}
+                      className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-primary transition-all group-hover:gap-2 hover:text-primary/80"
+                    >
+                      <span>{srv.linkText}</span>
+                      <span aria-hidden="true">&rarr;</span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4. INDUSTRIES WE SERVE SECTION */}
+      <section id="industries" className="industries-section bg-gray-50">
+        <div className="wrap">
+          <h2>Industries We Serve</h2>
+          <p className="industries-subhead">
+            We support organizations across industries including but not limited to those below. Our talent spans technical, professional, operational, and leadership roles.
+          </p>
+
+          <div className="industries-layout">
+            {/* Left Column: Interactive Industry Button List */}
+            <div className="industries-list">
+              {INDUSTRIES_WE_SERVE.map((item, idx) => {
+                const isActive = idx === activeIndustryIdx;
+                return (
+                  <button
+                    key={item.id}
+                    type="button"
+                    onClick={() => setActiveIndustryIdx(idx)}
+                    onMouseEnter={() => setActiveIndustryIdx(idx)}
+                    className={`industry-btn ${isActive ? 'is-active' : ''}`}
+                    style={{
+                      borderColor: isActive ? item.color : 'transparent',
+                    }}
+                  >
+                    <span className="industry-btn__name">{item.name}</span>
+                    <span
+                      className="industry-btn__arrow"
+                      style={{
+                        backgroundColor: isActive ? item.color : 'transparent',
+                      }}
+                    >
+                      &rarr;
+                    </span>
+                  </button>
+                );
+              })}
+
+              <Link to="/industries" className="explore-btn">
+                <span>Explore Industries</span>
+                <span aria-hidden="true">&rarr;</span>
               </Link>
             </div>
 
-            {/* Project Based Hiring */}
-            <div className="group flex flex-col overflow-hidden rounded-md border">
-              <Link className="shrink-0" to="/services/project-based-hiring">
-                <img
-                  alt="Project Based Hiring"
-                  width="0"
-                  height="0"
-                  decoding="async"
-                  className="aspect-video w-full object-cover"
-                  style={{ color: 'transparent' }}
-                  src="https://www.patternshiring.com/assets/images/posts/services/project-based-hiring.jpg"
-                />
-              </Link>
-              <Link className="flex flex-col justify-between p-8 transition-all group-hover:bg-primary-foreground" to="/services/project-based-hiring">
-                <p className="text-gradient font-semibold">Service</p>
-                <h1 className="font-serif text-2xl font-extrabold transition-all group-hover:text-primary lg:text-4xl">
-                  Project Based Hiring
-                </h1>
-                <p className="mt-3 line-clamp-3 text-muted-foreground">
-                  The way we do business is changing. Thanks to new and disruptive technologies and a rapidly evolving competitive landscape, companies have to adapt and become more agile or risk losing their business.
+            {/* Right Column: Display Card with Photo & Scrim Overlay */}
+            <div className="industry-display">
+              {INDUSTRIES_WE_SERVE.map((item, idx) => (
+                <div
+                  key={item.id}
+                  className={`industry-photo ${idx === activeIndustryIdx ? 'is-active' : ''}`}
+                >
+                  <img
+                    loading="lazy"
+                    src={item.image}
+                    alt={item.name}
+                    width="1000"
+                    height="750"
+                  />
+                </div>
+              ))}
+
+              <div className="industry-display__scrim">
+                <div className="industry-display__eyebrow">
+                  <span
+                    className="dot"
+                    style={{ backgroundColor: activeIndustry.color }}
+                  />
+                  <span>Featured Industry</span>
+                </div>
+                <div className="industry-display__name">
+                  {activeIndustry.name}
+                </div>
+                <p className="industry-display__desc">
+                  {activeIndustry.desc}
                 </p>
-              </Link>
+                <Link
+                  className="industry-display__link"
+                  to={activeIndustry.url}
+                >
+                  Explore {activeIndustry.name} &rarr;
+                </Link>
+
+                {/* Dwell Progress Indicator Bars */}
+                <div className="industry-display__bars">
+                  {INDUSTRIES_WE_SERVE.map((barItem, barIdx) => (
+                    <span
+                      key={barItem.id}
+                      onClick={() => setActiveIndustryIdx(barIdx)}
+                    >
+                      <i
+                        key={`${barIdx}-${activeIndustryIdx}`}
+                        className={barIdx === activeIndustryIdx ? 'industry-bar-fill' : ''}
+                        style={{
+                          backgroundColor: activeIndustry.color,
+                          width: barIdx < activeIndustryIdx ? '100%' : undefined,
+                        }}
+                      />
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 4. TESTIMONIALS SECTION */}
+      {/* 5. PROCESS / PARTNERSHIP SECTION */}
+      <section id="process" className="process-section">
+        <div className="process-section__glow" />
+        <div className="wrap">
+          <div className="process-header">
+            <h2>Partnership Built Around Your Hiring Needs.</h2>
+            <p>
+              Trispark keeps your staffing process focused on your role and workforce needs from the first conversation to the start date.
+            </p>
+          </div>
+
+          <div className="process-steps-track">
+            <div className="process-steps-grid">
+              {PROCESS_STEPS.map((step) => {
+                const IconComponent = step.icon;
+                return (
+                  <div key={step.title} className="process-step-item">
+                    <div
+                      className="process-step-node"
+                      style={{
+                        color: step.color,
+                        borderColor: step.color,
+                        boxShadow: `0 0 20px ${step.color}44`,
+                      }}
+                    >
+                      <IconComponent />
+                    </div>
+                    <div
+                      className={`process-step-title ${step.highlightTitle ? 'is-highlighted' : ''}`}
+                    >
+                      {step.title}
+                    </div>
+                    <p className="process-step-desc">{step.desc}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="process-cta-wrap">
+            <Link to="/contact-us" className="staging-btn staging-btn-gold">
+              <span>Talk to a Recruiter</span>
+              <span aria-hidden="true">&rarr;</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. TESTIMONIALS SECTION */}
       <section>
         <div className="relative isolate overflow-hidden bg-background py-24 sm:py-32">
           <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,var(--color-blue-100),white)] opacity-20" />
@@ -476,7 +838,11 @@ export default function Home() {
               </div>
 
               {/* Right Side: Quote Carousel */}
-              <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24">
+              <div
+                className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24"
+                onMouseEnter={() => setIsTestimonialPaused(true)}
+                onMouseLeave={() => setIsTestimonialPaused(false)}
+              >
                 <div className="relative isolate pt-6 sm:pt-12">
                   <svg fill="none" viewBox="0 0 162 128" aria-hidden="true" className="absolute left-0 top-0 -z-10 h-32 stroke-primary/20">
                     <path
@@ -487,8 +853,13 @@ export default function Home() {
                   </svg>
 
                   <div className="relative w-full">
-                    <div className="relative overflow-hidden">
-                      <div className="w-full" draggable="false" style={{ opacity: 1, transform: 'none', userSelect: 'none', touchAction: 'pan-y', zIndex: 1 }}>
+                    <div className="relative overflow-hidden min-h-[220px]">
+                      <div
+                        key={currentReviewIdx}
+                        className="w-full animate-fade-in"
+                        draggable="false"
+                        style={{ userSelect: 'none', touchAction: 'pan-y', zIndex: 1 }}
+                      >
                         <blockquote className="font-serif text-xl/8 font-medium sm:text-2xl/8">
                           <p className="text-balance">
                             {expandedQuote
@@ -516,24 +887,48 @@ export default function Home() {
                       </div>
                     </div>
 
-                    <button
-                      onClick={prevReview}
-                      className="absolute left-0 top-1/2 z-10 -translate-x-12 -translate-y-1/2 rounded-full bg-white p-2 shadow-lg transition-all duration-200 cursor-pointer hover:bg-gray-50 border border-slate-100"
-                      aria-label="Previous testimonial"
-                    >
-                      <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary">
-                        <path d="M8.84182 3.13514C9.04327 3.32401 9.05348 3.64042 8.86462 3.84188L5.43521 7.49991L8.86462 11.1579C9.05348 11.3594 9.04327 11.6758 8.84182 11.8647C8.64036 12.0535 8.32394 12.0433 8.13508 11.8419L4.38508 7.84188C4.20477 7.64955 4.20477 7.35027 4.38508 7.15794L8.13508 3.15794C8.32394 2.95648 8.64036 2.94628 8.84182 3.13514Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" />
-                      </svg>
-                    </button>
-                    <button
-                      onClick={nextReview}
-                      className="absolute right-0 top-1/2 z-10 -translate-y-1/2 translate-x-12 rounded-full bg-white p-2 shadow-lg transition-all duration-200 cursor-pointer hover:bg-gray-50 border border-slate-100"
-                      aria-label="Next testimonial"
-                    >
-                      <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary">
-                        <path d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" />
-                      </svg>
-                    </button>
+                    {/* Navigation Dots Indicator & Controls */}
+                    <div className="mt-8 flex items-center justify-between border-t border-slate-100 pt-6">
+                      <div className="flex items-center gap-2">
+                        {testimonialsData.map((_, idx) => (
+                          <button
+                            key={idx}
+                            type="button"
+                            onClick={() => {
+                              setExpandedQuote(false);
+                              setCurrentReviewIdx(idx);
+                            }}
+                            className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
+                              idx === currentReviewIdx
+                                ? 'w-8 bg-primary shadow-2xs'
+                                : 'w-2.5 bg-slate-200 hover:bg-slate-300'
+                            }`}
+                            aria-label={`Go to testimonial ${idx + 1}`}
+                          />
+                        ))}
+                      </div>
+
+                      <div className="flex items-center gap-2">
+                        <button
+                          onClick={prevReview}
+                          className="rounded-full bg-white p-2 shadow-sm transition-all duration-200 cursor-pointer hover:bg-gray-50 border border-slate-200 text-slate-700 hover:text-primary hover:border-primary/40"
+                          aria-label="Previous testimonial"
+                        >
+                          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5">
+                            <path d="M8.84182 3.13514C9.04327 3.32401 9.05348 3.64042 8.86462 3.84188L5.43521 7.49991L8.86462 11.1579C9.05348 11.3594 9.04327 11.6758 8.84182 11.8647C8.64036 12.0535 8.32394 12.0433 8.13508 11.8419L4.38508 7.84188C4.20477 7.64955 4.20477 7.35027 4.38508 7.15794L8.13508 3.15794C8.32394 2.95648 8.64036 2.94628 8.84182 3.13514Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" />
+                          </svg>
+                        </button>
+                        <button
+                          onClick={nextReview}
+                          className="rounded-full bg-white p-2 shadow-sm transition-all duration-200 cursor-pointer hover:bg-gray-50 border border-slate-200 text-slate-700 hover:text-primary hover:border-primary/40"
+                          aria-label="Next testimonial"
+                        >
+                          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5">
+                            <path d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

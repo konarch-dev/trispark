@@ -71,21 +71,21 @@ export default function Jobs() {
 
                   <ol className="grid grid-cols-1 gap-6 md:grid-cols-3">
                     <li className="space-y-2 rounded-lg border p-6 bg-white">
-                      <p className="text-gradient text-sm font-semibold">Step 1</p>
+                      {/* <p className="text-gradient text-sm font-semibold">Step 1</p> */}
                       <h3 className="text-foreground font-semibold">Browse current openings</h3>
                       <p className="text-muted-foreground text-sm">
                         Search the open positions listed above and select a role to see the full job description and requirements.
                       </p>
                     </li>
                     <li className="space-y-2 rounded-lg border p-6 bg-white">
-                      <p className="text-gradient text-sm font-semibold">Step 2</p>
+                      {/* <p className="text-gradient text-sm font-semibold">Step 2</p> */}
                       <h3 className="text-foreground font-semibold">Apply or register with us</h3>
                       <p className="text-muted-foreground text-sm">
                         Apply directly to a listed role, or submit your resume so our recruiters can match you with upcoming openings.
                       </p>
                     </li>
                     <li className="space-y-2 rounded-lg border p-6 bg-white">
-                      <p className="text-gradient text-sm font-semibold">Step 3</p>
+                      {/* <p className="text-gradient text-sm font-semibold">Step 3</p> */}
                       <h3 className="text-foreground font-semibold">Talk to a recruiter</h3>
                       <p className="text-muted-foreground text-sm">
                         A Trispark recruiter will review your profile and contact you about suitable roles, interviews and next steps.

@@ -1,64 +1,50 @@
 [
   {
-    "slug": "workforce-solutions",
-    "name": "Workforce Solutions",
-    "subtitle": "A New Way of Human Resource",
-    "image": "/assets/images/posts/services/workforce-solutions.jpg",
-    "description": "Whether you face these generic workforce challenges or have specialized needs based on your industry requirements or business model, Trispark is the one-stop workforce solutions provider you are looking for.",
+    "slug": "contract-staffing",
+    "name": "Contract Staffing",
+    "subtitle": "Flexible Contingent & Project Staffing",
+    "image": "/assets/images/services/contract-staffing.jpg",
+    "description": "Trispark provides flexible contract and contingent staffing that puts qualified professionals where businesses need them for the desired project duration.",
     "paragraphs": [
-      "Empowering Your Business with Strategic Workforce Solutions: Maximizing Efficiency, Productivity, and Growth Opportunities.",
-      "In today&#x27;s competitive landscape, every business faces unique workforce challenges. Some businesses:",
-      "Whether you&#x27;re dealing with these generic workforce challenges or have specialized needs based on your industry requirements or business model, Trispark is the ultimate workforce solutions provider you&#x27;ve been searching for.",
-      "Businesses of all sizes and industries encounter workforce-related challenges. In today&#x27;s dynamic market, talent and workforce need to evolve to stay ahead. Even if you have an HR department, you may need to outsource tasks and leverage effective workforce solutions that Trispark is equipped to provide.",
-      "With over a decade of experience helping various businesses with their workforce challenges, you can rely on us to find solutions tailored to your needs. Our access to a larger talent pool, advanced testing and screening capabilities, and adherence to the best hiring practices make our workforce solutions highly productive and efficient.",
-      "Each organization has unique talent needs and requirements, resulting in different workforce solutions falling under specific categories.",
-      "Acquiring temporary staff can contribute significantly to the &quot;life-cycle&quot; cost of an employee. We provide optimal time and cost solutions for your temporary staffing needs, preventing short-term hires from needlessly inflating your project costs. We also handle complex workforce requirements like consultants, specialized skilled workers, freelancers, contract staffing, teams, and contingent staffing.",
-      "Witness the potential of temporary employees firsthand before considering them for permanent positions. This saves time, money, and onboarding efforts, as we ease the transition from temporary to permanent positions.",
-      "Finding the right permanent resource can be challenging, especially for senior-level positions. We leverage a broad talent pool through traditional recruiting and passive candidate sourcing, focusing on candidates ideally suited for your organization.",
-      "We Are Trispark – Your Ideal Workforce Solutions Provider.",
-      "Here is a list of services that we provide.",
-      "Project Based Hiring",
-      "Workforce Solutions",
-      "Here is a list of industries that we have worked with.",
-      "Medical Solutions",
-      "IT Services (Information Technology Services)",
-      "Pharma, Biotech &amp; Medical Devices",
-      "Food &amp; Beverages",
-      "Supply Chain Management",
-      "Construction, Energy &amp; Utility",
-      "All Industries"
+      "Add Talent When Your Business Needs It: Trispark provides flexible contract and contingent staffing that puts qualified professionals where businesses need them for the desired project duration.",
+      "See where flexible talent fits and what it delivers for your business.",
+      "Our contract staffing services deliver specialized skills, right-sized teams, and scalable capacity to keep your projects moving without permanent overhead."
     ]
   },
   {
-    "slug": "project-based-hiring",
-    "name": "Project Based Hiring",
-    "subtitle": "A New Way of Doing Business",
-    "image": "/assets/images/posts/services/project-based-hiring.jpg",
-    "description": "The way we do business is changing. Thanks to new and disruptive technologies and a rapidly evolving competitive landscape, companies have to adapt and become more agile or risk losing their business.",
+    "slug": "permanent-staffing",
+    "name": "Permanent Staffing",
+    "subtitle": "Direct Hire & Full-Time Placement",
+    "image": "/assets/images/services/permanent-staffing.jpg",
+    "description": "Trispark helps employers find qualified professionals for direct hire and full-time placement in permanent positions that support long-term business growth.",
     "paragraphs": [
-      "Efficient Project-Based Hiring: Unlock Success by Matching Specialized Talent with Your Unique Project Requirements.",
-      "The business landscape is undergoing a transformation. Disruptive technologies and evolving competition demand adaptability. Embracing project-based hiring emerges as a solution.",
-      "Project-Based Hiring: Adapting for Success",
-      "Project-based hiring is no longer industry-specific. As companies recognize its benefits, it fuels growth across sectors.",
-      "Every company&#x27;s hiring needs are unique. Project-based hiring demands excellence in operational and competency standards. At Trispark, we specialize in this complexity. Beyond hiring, we help define project recruitment needs, team structures, hierarchies, and communication practices.",
-      "With a decade of experience, we&#x27;ve evolved alongside industry demands. Our practices find the best fit for your business.",
-      "Each project is distinct, so are our solutions. While we offer three standard approaches, we tailor them to match individual needs.",
-      "1. Bulk Hiring\nEfficiently recruit high-quality candidates in quantity. We employ pre-screened &quot;clusters&quot; or rapid technical tests.",
-      "2. Team Services\nExcel in building specialized teams for projects, especially growth-focused ventures.",
-      "3. Managed Staffing\nPartner with us for long-term projects. Leverage our managed staffing for ideal transformations.",
-      "Harness project-based hiring&#x27;s strengths for business lifecycle success:",
-      "We Are Trispark – Your Solution for Project-Based Hiring Needs.",
-      "Here is a list of services that we provide.",
-      "Project Based Hiring",
-      "Workforce Solutions",
-      "Here is a list of industries that we have worked with.",
-      "Medical Solutions",
-      "IT Services (Information Technology Services)",
-      "Pharma, Biotech &amp; Medical Devices",
-      "Food &amp; Beverages",
-      "Supply Chain Management",
-      "Construction, Energy &amp; Utility",
-      "All Industries"
+      "Build a Workforce for Long-Term Growth: Trispark helps employers find qualified professionals for direct hire and full-time placement in permanent positions that support long-term business growth.",
+      "See where direct hire fits and what it brings to your business.",
+      "Our direct hire placement services deliver lasting commitment, teams built to last, and cultural alignment to support your long-term organizational success."
+    ]
+  },
+  {
+    "slug": "executive-search",
+    "name": "Executive Search & Leadership Hiring",
+    "subtitle": "Retained Search & C-Suite Placements",
+    "image": "/assets/images/services/executive-search.jpg",
+    "description": "Trispark helps employers identify and recruit senior leaders and specialized professionals for positions that have a direct impact on business performance.",
+    "paragraphs": [
+      "Find Leaders Who Shape What's Next: Trispark helps employers identify and recruit senior leaders and specialized professionals for positions that have a direct impact on business performance.",
+      "See where leadership search fits and what it delivers.",
+      "Our executive search practice delivers proven leaders, confidential search management, and market intelligence to appoint executives who drive sustainable growth."
+    ]
+  },
+  {
+    "slug": "ai-services",
+    "name": "AI Services",
+    "subtitle": "Applied AI & Intelligent Workflows",
+    "image": "/assets/images/services/ai-services.jpg",
+    "description": "From process automation and AI agents to generative AI, RAG, and MLOps, Trispark helps businesses design, build, and run AI that fits the way their teams already work.",
+    "paragraphs": [
+      "Move Beyond Automation. Build Intelligence That Acts: From process automation and AI agents to generative AI, RAG, and MLOps, Trispark helps businesses design, build, and run AI that fits the way their teams already work.",
+      "See where AI fits in your business and what it delivers.",
+      "Our AI solutions deliver practical automation, autonomous agentic task handling, enterprise RAG, and production MLOps to unlock exponential productivity."
     ]
   }
-]
+]

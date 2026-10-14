@@ -49,20 +49,44 @@ export default function IndustryDetail() {
                         <h3 className="font-serif text-3xl font-extrabold">Services</h3>
                         <p className="text-sm text-muted-foreground">Here is a list of services that we provide.</p>
                       </div>
-                      <ul className="relative divide-y before:absolute before:left-0 before:top-0 before:h-px before:w-6 before:bg-gray-950 after:absolute after:left-8 after:right-0 after:top-0 after:h-px after:bg-gray-950/10">
+                      <ul className="relative divide-y divide-slate-100 before:absolute before:left-0 before:top-0 before:h-px before:w-6 before:bg-gray-950 after:absolute after:left-8 after:right-0 after:top-0 after:h-px after:bg-gray-950/10">
                         <li className="py-3">
-                          <Link className="group block" to="/services/project-based-hiring">
-                            <p className="line-clamp-1 font-bold group-hover:text-blue-600">Project Based Hiring</p>
-                            <small className="line-clamp-2 text-muted-foreground">
-                              The way we do business is changing. Thanks to new and disruptive technologies and a rapidly evolving competitive landscape, companies have to adapt and become more agile or risk losing their business.
+                          <Link className="group block" to="/services/contract-staffing">
+                            <p className="line-clamp-1 font-bold group-hover:text-blue-600 transition-colors">
+                              Contract Staffing
+                            </p>
+                            <small className="line-clamp-2 text-muted-foreground block mt-1 leading-snug">
+                              Trispark provides flexible contract and contingent staffing that puts qualified professionals where businesses need them for the desired project duration.
                             </small>
                           </Link>
                         </li>
                         <li className="py-3">
-                          <Link className="group block" to="/services/workforce-solutions">
-                            <p className="line-clamp-1 font-bold group-hover:text-blue-600">Workforce Solutions</p>
-                            <small className="line-clamp-2 text-muted-foreground">
-                              Whether you face these generic workforce challenges or have specialized needs based on your industry requirements or business model, Trispark is the one-stop workforce solutions provider you are looking for.
+                          <Link className="group block" to="/services/permanent-staffing">
+                            <p className="line-clamp-1 font-bold group-hover:text-blue-600 transition-colors">
+                              Permanent Staffing
+                            </p>
+                            <small className="line-clamp-2 text-muted-foreground block mt-1 leading-snug">
+                              Trispark helps employers find qualified professionals for direct hire and full-time placement in permanent positions that support long-term business growth.
+                            </small>
+                          </Link>
+                        </li>
+                        <li className="py-3">
+                          <Link className="group block" to="/services/executive-search">
+                            <p className="line-clamp-1 font-bold group-hover:text-blue-600 transition-colors">
+                              Executive Search
+                            </p>
+                            <small className="line-clamp-2 text-muted-foreground block mt-1 leading-snug">
+                              Trispark helps employers identify and recruit senior leaders and specialized professionals for positions that have a direct impact on business performance.
+                            </small>
+                          </Link>
+                        </li>
+                        <li className="py-3">
+                          <Link className="group block" to="/services/ai-services">
+                            <p className="line-clamp-1 font-bold group-hover:text-blue-600 transition-colors">
+                              AI Services
+                            </p>
+                            <small className="line-clamp-2 text-muted-foreground block mt-1 leading-snug">
+                              From process automation and AI agents to generative AI, RAG, and MLOps, Trispark helps businesses design, build, and run AI that fits the way their teams already work.
                             </small>
                           </Link>
                         </li>

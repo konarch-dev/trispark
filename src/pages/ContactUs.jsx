@@ -71,7 +71,7 @@ export default function ContactUs() {
                     <ul role="list" className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2">
                       <li>
                         <address className="text-muted-foreground text-sm not-italic">
-                          <strong className="text-foreground">Trispark(Trispark)</strong>
+                          <strong className="text-foreground">Trispark</strong>
                           <br />
                           25298 FM 2978 Rd.,
 
@@ -93,7 +93,7 @@ export default function ContactUs() {
                               href="mailto:business@tecnoprism.com
 "
                             >
-                              business@tecnoprism.com
+                              info@trisparkinc.com
 
                             </a>
                           </dd>
@@ -103,9 +103,9 @@ export default function ContactUs() {
                           <dd>
                             <a
                               className="text-muted-foreground hover:text-foreground"
-                              href="tel:+13024850400"
+                              href="tel:+12814002666"
                             >
-                              business@tecnoprism.com
+                              +1 281-400-2666
                             </a>
                           </dd>
                         </div>
@@ -115,7 +115,7 @@ export default function ContactUs() {
                     <div className="before:bg-foreground relative mt-16 pt-16 before:absolute before:top-0 before:left-0 before:h-px before:w-6 after:absolute after:top-0 after:right-0 after:left-8 after:h-px after:bg-gray-950/10">
                       <h2 className="font-display text-foreground text-base font-semibold">Follow us</h2>
                       <ul role="list" className="text-foreground mt-6 flex gap-x-10">
-                        <li>
+                        {/* <li>
                           <a
                             href="https://www.facebook.com/Trispark247"
                             target="_blank"
@@ -129,10 +129,10 @@ export default function ContactUs() {
                               </svg>
                             </div>
                           </a>
-                        </li>
+                        </li> */}
                         <li>
                           <a
-                            href="https://www.linkedin.com/company/patternshiring"
+                            href="https://www.linkedin.com/company/trisparkinc"
                             target="_blank"
                             rel="noreferrer"
                             aria-label="LinkedIn"
@@ -147,7 +147,7 @@ export default function ContactUs() {
                         </li>
                         <li>
                           <a
-                            href="https://www.instagram.com/patternshiring/"
+                            href="https://www.instagram.com/trisparkinc/"
                             target="_blank"
                             rel="noreferrer"
                             aria-label="Instagram"
@@ -160,7 +160,7 @@ export default function ContactUs() {
                             </div>
                           </a>
                         </li>
-                        <li>
+                        {/* <li>
                           <a
                             href="https://youtu.be/DSeT3Nb5-Hk"
                             target="_blank"
@@ -174,10 +174,10 @@ export default function ContactUs() {
                               </svg>
                             </div>
                           </a>
-                        </li>
+                        </li> */}
                         <li>
                           <a
-                            href="https://api.whatsapp.com/send/?phone=13024850400&amp;text=Hello+Trispark%21%21+%0D%0ALike+to+know+more+information+about+https%3A%2F%2Fwww.patternshiring.com%2Fcontact-us%2F&amp;type=phone_number&amp;app_absent=0"
+                            href="https://api.whatsapp.com/send/?phone=12814002666&amp;text=Hello+Trispark%21%21+%0D%0ALike+to+know+more+information+about+https%3A%2F%2Fwww.trisparkinc.com%2Fcontact-us%2F&amp;type=phone_number&amp;app_absent=0"
                             target="_blank"
                             rel="noreferrer"
                             aria-label="WhatsApp"
@@ -331,7 +331,7 @@ export default function ContactUs() {
                           htmlFor="smsUpdates"
                           onClick={() => setFormData({ ...formData, smsUpdates: !formData.smsUpdates })}
                         >
-                          I agree to receive text messages from Trispark (Trispark LLC) about applications, interview scheduling, shift confirmations, onboarding, and candidate/hiring updates. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of purchase or of applying for a job.
+                          I agree to receive text messages from Trispark about applications, interview scheduling, shift confirmations, onboarding, and candidate/hiring updates. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of purchase or of applying for a job.
                         </label>
                       </div>
 
@@ -357,7 +357,7 @@ export default function ContactUs() {
                           htmlFor="smsMarketing"
                           onClick={() => setFormData({ ...formData, smsMarketing: !formData.smsMarketing })}
                         >
-                          I also agree to receive recurring marketing text messages from Trispark (Trispark LLC) about new job openings and staffing opportunities (up to 4 msgs/week). Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of purchase or of applying for a job.
+                          I also agree to receive recurring marketing text messages from Trispark about new job openings and staffing opportunities (up to 4 msgs/week). Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of purchase or of applying for a job.
                         </label>
                       </div>
 
@@ -438,7 +438,7 @@ export default function ContactUs() {
 
       {/* Embedded Google Map */}
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3065.736446797638!2d-75.4771213235834!3d39.79046959351693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6e38488808071%3A0x2cc7001585b5b84e!2s2093%20Philadelphia%20Pike%20%239086%2C%20Claymont%2C%20DE%2019703%2C%20USA!5e0!3m2!1sen!2sin!4v1693585862381!5m2!1sen!2sin"
+        src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=25298%20FM%202978%20Rd.,%20Unit%20A,%20Tomball,%20TX%2077375&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
         className="h-96 w-full border-none grayscale transition duration-300 ease-in-out hover:grayscale-0 block"
         allowFullScreen=""
         loading="lazy"

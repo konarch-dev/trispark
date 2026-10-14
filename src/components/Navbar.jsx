@@ -7,12 +7,14 @@ const NAV_ITEMS = [
   {
     title: 'Services',
     submenu: [
-      { title: 'Workforce Solutions', url: '/services/workforce-solutions' },
-      { title: 'Project Based Hiring', url: '/services/project-based-hiring' },
+      { title: 'Contract Staffing', url: '/services/contract-staffing' },
+      { title: 'Permanent Staffing', url: '/services/permanent-staffing' },
+      { title: 'Executive Search', url: '/services/executive-search' },
+      { title: 'AI Services', url: '/services/ai-services' },
     ],
   },
   { title: 'Industries', url: '/industries' },
-  { title: 'Blogs', url: '/blogs' },
+  { title: 'Insights', url: '/insights' },
   { title: 'Jobs', url: '/jobs' },
   { title: 'About Us', url: '/about-us' },
   { title: 'Contact Us', url: '/contact-us' },
@@ -46,10 +48,9 @@ export default function Navbar() {
   };
 
   const linkClass = (path) =>
-    `group inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-transparent hover:text-primary focus:bg-transparent focus:text-primary focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 ${
-      isCurrent(path)
-        ? 'data-active text-primary font-semibold'
-        : 'text-foreground'
+    `group inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-transparent hover:text-primary focus:bg-transparent focus:text-primary focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 ${isCurrent(path)
+      ? 'data-active text-primary font-semibold'
+      : 'text-foreground'
     }`;
 
   return (
@@ -196,9 +197,8 @@ export default function Navbar() {
         <div className="xl:hidden border-t border-slate-100 bg-white/98 backdrop-blur-lg px-4 pt-4 pb-8 space-y-3 animate-fade-in max-h-[85vh] overflow-y-auto">
           <Link
             to="/"
-            className={`block rounded-lg px-3 py-2 text-base font-medium ${
-              location.pathname === '/' ? 'bg-primary/10 text-primary font-semibold' : 'text-slate-800'
-            }`}
+            className={`block rounded-lg px-3 py-2 text-base font-medium ${location.pathname === '/' ? 'bg-primary/10 text-primary font-semibold' : 'text-slate-800'
+              }`}
           >
             Home
           </Link>
@@ -209,61 +209,68 @@ export default function Navbar() {
             </div>
             <div className="pl-3 space-y-1">
               <Link
-                to="/services/workforce-solutions"
+                to="/services/contract-staffing"
                 className="block rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:text-primary"
               >
-                Workforce Solutions
+                Contract Staffing
               </Link>
               <Link
-                to="/services/project-based-hiring"
+                to="/services/permanent-staffing"
                 className="block rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:text-primary"
               >
-                Project Based Hiring
+                Permanent Staffing
+              </Link>
+              <Link
+                to="/services/executive-search"
+                className="block rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:text-primary"
+              >
+                Executive Search
+              </Link>
+              <Link
+                to="/services/ai-services"
+                className="block rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:text-primary"
+              >
+                AI Services
               </Link>
             </div>
           </div>
 
           <Link
             to="/industries"
-            className={`block rounded-lg px-3 py-2 text-base font-medium ${
-              location.pathname.startsWith('/industries') ? 'bg-primary/10 text-primary font-semibold' : 'text-slate-800'
-            }`}
+            className={`block rounded-lg px-3 py-2 text-base font-medium ${location.pathname.startsWith('/industries') ? 'bg-primary/10 text-primary font-semibold' : 'text-slate-800'
+              }`}
           >
             Industries
           </Link>
 
           <Link
-            to="/blogs"
-            className={`block rounded-lg px-3 py-2 text-base font-medium ${
-              location.pathname.startsWith('/blogs') ? 'bg-primary/10 text-primary font-semibold' : 'text-slate-800'
-            }`}
+            to="/insights"
+            className={`block rounded-lg px-3 py-2 text-base font-medium ${location.pathname.startsWith('/insights') ? 'bg-primary/10 text-primary font-semibold' : 'text-slate-800'
+              }`}
           >
-            Blogs
+            Insights
           </Link>
 
           <Link
             to="/jobs"
-            className={`block rounded-lg px-3 py-2 text-base font-medium ${
-              location.pathname.startsWith('/jobs') ? 'bg-primary/10 text-primary font-semibold' : 'text-slate-800'
-            }`}
+            className={`block rounded-lg px-3 py-2 text-base font-medium ${location.pathname.startsWith('/jobs') ? 'bg-primary/10 text-primary font-semibold' : 'text-slate-800'
+              }`}
           >
             Jobs
           </Link>
 
           <Link
             to="/about-us"
-            className={`block rounded-lg px-3 py-2 text-base font-medium ${
-              location.pathname.startsWith('/about-us') ? 'bg-primary/10 text-primary font-semibold' : 'text-slate-800'
-            }`}
+            className={`block rounded-lg px-3 py-2 text-base font-medium ${location.pathname.startsWith('/about-us') ? 'bg-primary/10 text-primary font-semibold' : 'text-slate-800'
+              }`}
           >
             About Us
           </Link>
 
           <Link
             to="/contact-us"
-            className={`block rounded-lg px-3 py-2 text-base font-medium ${
-              location.pathname.startsWith('/contact-us') ? 'bg-primary/10 text-primary font-semibold' : 'text-slate-800'
-            }`}
+            className={`block rounded-lg px-3 py-2 text-base font-medium ${location.pathname.startsWith('/contact-us') ? 'bg-primary/10 text-primary font-semibold' : 'text-slate-800'
+              }`}
           >
             Contact Us
           </Link>

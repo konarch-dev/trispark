@@ -1,11 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useModal } from '../context/ModalContext';
-import { ArrowRight, CheckCircle2, Users, Briefcase, Zap, Shield, Target } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Zap, Shield, Target } from 'lucide-react';
 import servicesData from '../data/services.json';
 
 export default function Services() {
-  const { openResumeModal } = useModal();
 
   return (
     <div className="space-y-20 lg:space-y-28 py-8">
@@ -56,34 +54,64 @@ export default function Services() {
                     <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
                       Key Highlights:
                     </p>
-                    {srv.slug === 'workforce-solutions' ? (
+                    {srv.slug === 'contract-staffing' ? (
                       <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
                         <li className="flex items-center gap-2">
                           <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
-                          <span>Temporary & Contract Staffing for flexible coverage</span>
+                          <span>Agile contingent talent deployed on-demand for project durations</span>
                         </li>
                         <li className="flex items-center gap-2">
                           <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
-                          <span>Temp-to-Hire options for cultural & skills validation</span>
+                          <span>Scalable capacity without permanent headcount overhead</span>
                         </li>
                         <li className="flex items-center gap-2">
                           <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
-                          <span>Direct Hire & Permanent Placement for high-impact roles</span>
+                          <span>Pre-screened professionals ready to start across tech & operations</span>
+                        </li>
+                      </ul>
+                    ) : srv.slug === 'permanent-staffing' ? (
+                      <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
+                        <li className="flex items-center gap-2">
+                          <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                          <span>Direct hire placement for long-term ownership & commitment</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                          <span>Multi-layered candidate qualification & credential verification</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                          <span>Structured guidance from offer negotiation to smooth onboarding</span>
+                        </li>
+                      </ul>
+                    ) : srv.slug === 'executive-search' ? (
+                      <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
+                        <li className="flex items-center gap-2">
+                          <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                          <span>Retained & confidential search for C-suite, VP, and Director roles</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                          <span>In-depth leadership track record, competency & culture assessment</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                          <span>Comprehensive market intelligence, mapping & compensation benchmarking</span>
                         </li>
                       </ul>
                     ) : (
                       <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
                         <li className="flex items-center gap-2">
                           <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
-                          <span>Dedicated sprint recruitment for high-volume staffing</span>
+                          <span>AI agents, autonomous multi-step execution & workflow automation</span>
                         </li>
                         <li className="flex items-center gap-2">
                           <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
-                          <span>Niche technical screening & skill verification</span>
+                          <span>Enterprise RAG systems grounded in internal documents & data</span>
                         </li>
                         <li className="flex items-center gap-2">
                           <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
-                          <span>Turnkey managed staffing without internal overhead</span>
+                          <span>End-to-end MLOps, model monitoring & responsible governance</span>
                         </li>
                       </ul>
                     )}
