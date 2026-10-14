@@ -3,8 +3,31 @@
     "slug": "contract-staffing",
     "name": "Contract Staffing",
     "subtitle": "Flexible Contingent & Project Staffing",
+    "badge": "Contingent & Project",
+    "metric": "24–48h Deployment",
     "image": "/assets/images/services/contract-staffing.jpg",
-    "description": "Trispark provides flexible contract and contingent staffing that puts qualified professionals where businesses need them for the desired project duration.",
+    "description": "Trispark provides agile contract and contingent staffing that puts qualified, pre-screened professionals where businesses need them for immediate project milestones.",
+    "highlights": [
+      {
+        "title": "On-Demand Agility",
+        "desc": "Deploy specialized niche talent in as little as 24 to 48 hours for immediate project sprints."
+      },
+      {
+        "title": "Zero Headcount Overhead",
+        "desc": "Scale team capacity up or down dynamically without permanent payroll or benefits liability."
+      },
+      {
+        "title": "Full Compliance Management",
+        "desc": "End-to-end background screening, credentials verification, and compliant payroll handling."
+      }
+    ],
+    "targetRoles": [
+      "Software Engineers",
+      "Clinical Specialists",
+      "QA Analysts",
+      "Project Managers",
+      "Systems Architects"
+    ],
     "paragraphs": [
       "Add Talent When Your Business Needs It: Trispark provides flexible contract and contingent staffing that puts qualified professionals where businesses need them for the desired project duration.",
       "See where flexible talent fits and what it delivers for your business.",
@@ -15,8 +38,31 @@
     "slug": "permanent-staffing",
     "name": "Permanent Staffing",
     "subtitle": "Direct Hire & Full-Time Placement",
+    "badge": "Direct Hire",
+    "metric": "90-Day Placement Guarantee",
     "image": "/assets/images/services/permanent-staffing.jpg",
-    "description": "Trispark helps employers find qualified professionals for direct hire and full-time placement in permanent positions that support long-term business growth.",
+    "description": "Trispark helps organizations find and hire high-impact full-time professionals who bring lasting technical excellence and cultural alignment to drive sustained growth.",
+    "highlights": [
+      {
+        "title": "Built for Long-Term Impact",
+        "desc": "Focus on high-retention candidates committed to organizational vision, culture, and long-term goals."
+      },
+      {
+        "title": "Multi-Stage Rigorous Vetting",
+        "desc": "Comprehensive technical audits, credential verification, and detailed peer reference investigations."
+      },
+      {
+        "title": "Offer & Onboarding Advisory",
+        "desc": "Market compensation benchmarking, offer structuring, and active candidate transition management."
+      }
+    ],
+    "targetRoles": [
+      "Full-Stack Developers",
+      "Department Directors",
+      "Staff Scientists",
+      "DevOps Engineers",
+      "Operations Leads"
+    ],
     "paragraphs": [
       "Build a Workforce for Long-Term Growth: Trispark helps employers find qualified professionals for direct hire and full-time placement in permanent positions that support long-term business growth.",
       "See where direct hire fits and what it brings to your business.",
@@ -27,8 +73,31 @@
     "slug": "executive-search",
     "name": "Executive Search & Leadership Hiring",
     "subtitle": "Retained Search & C-Suite Placements",
+    "badge": "Retained Search",
+    "metric": "100% Confidential Execution",
     "image": "/assets/images/services/executive-search.jpg",
-    "description": "Trispark helps employers identify and recruit senior leaders and specialized professionals for positions that have a direct impact on business performance.",
+    "description": "A retained executive search practice dedicated to identifying, evaluating, and appointing visionary C-suite leaders and senior executives who shape organizational trajectory.",
+    "highlights": [
+      {
+        "title": "Discreet & Confidential Search",
+        "desc": "Highest standards of discretion for sensitive leadership transitions and strategic new divisions."
+      },
+      {
+        "title": "Exhaustive Talent Mapping",
+        "desc": "Deep market intelligence mapping passive industry leaders across North American and global hubs."
+      },
+      {
+        "title": "Executive Competency Audits",
+        "desc": "In-depth evaluations of strategic vision, track-record metrics, and proven crisis leadership."
+      }
+    ],
+    "targetRoles": [
+      "Chief Technology Officer (CTO)",
+      "VP of Engineering",
+      "Chief Medical Officer",
+      "VP of Operations",
+      "Chief Financial Officer (CFO)"
+    ],
     "paragraphs": [
       "Find Leaders Who Shape What's Next: Trispark helps employers identify and recruit senior leaders and specialized professionals for positions that have a direct impact on business performance.",
       "See where leadership search fits and what it delivers.",
@@ -37,14 +106,37 @@
   },
   {
     "slug": "ai-services",
-    "name": "AI Services",
+    "name": "AI Services & Workflow Automation",
     "subtitle": "Applied AI & Intelligent Workflows",
+    "badge": "Applied AI & MLOps",
+    "metric": "Autonomous Multi-Step AI",
     "image": "/assets/images/services/ai-services.jpg",
-    "description": "From process automation and AI agents to generative AI, RAG, and MLOps, Trispark helps businesses design, build, and run AI that fits the way their teams already work.",
+    "description": "From autonomous AI agents and enterprise RAG systems to production MLOps, Trispark designs and deploys pragmatic artificial intelligence tailored to your workflows.",
+    "highlights": [
+      {
+        "title": "Autonomous Agentic AI",
+        "desc": "Self-directed multi-step task execution that connects directly to your databases, APIs, and CRMs."
+      },
+      {
+        "title": "Enterprise Knowledge RAG",
+        "desc": "Secure retrieval pipelines that allow teams to converse with and analyze proprietary data safely."
+      },
+      {
+        "title": "Production-Grade MLOps",
+        "desc": "End-to-end model evaluation, prompt optimization, latency minimization, and governance safeguards."
+      }
+    ],
+    "targetRoles": [
+      "AI / ML Engineers",
+      "Enterprise RAG Architects",
+      "Agentic Workflow Developers",
+      "Data Pipeline Specialists",
+      "MLOps Engineers"
+    ],
     "paragraphs": [
       "Move Beyond Automation. Build Intelligence That Acts: From process automation and AI agents to generative AI, RAG, and MLOps, Trispark helps businesses design, build, and run AI that fits the way their teams already work.",
       "See where AI fits in your business and what it delivers.",
       "Our AI solutions deliver practical automation, autonomous agentic task handling, enterprise RAG, and production MLOps to unlock exponential productivity."
     ]
   }
-]
+]
