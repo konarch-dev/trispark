@@ -1540,4 +1540,72 @@ h3,
   }
 }
 
+/* ===================================================================
+   Mobile Hamburger Button & Animated Morphing Icon
+   =================================================================== */
+.trispark-hamburger {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 12px;
+  border: 1px solid #dfe7ed;
+  background: #ffffff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 0;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 1px 3px rgba(11, 36, 54, 0.06);
+  flex-shrink: 0;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.trispark-hamburger:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  box-shadow: 0 3px 8px rgba(11, 36, 54, 0.08);
+}
+
+.trispark-hamburger:active {
+  transform: scale(0.94);
+}
+
+.trispark-hamburger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 9999px;
+  background: #0f172a;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease, background-color 0.2s ease;
+  transform-origin: center;
+}
+
+.trispark-hamburger.is-open {
+  border-color: #bae6fd;
+  background: #f0f9ff;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.12);
+}
+
+.trispark-hamburger.is-open span {
+  background: #0284c7;
+}
+
+.trispark-hamburger.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.trispark-hamburger.is-open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.trispark-hamburger.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 
