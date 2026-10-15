@@ -94,13 +94,12 @@ export default function Jobs() {
                   </ol>
 
                   <p className="text-muted-foreground text-center text-sm">
-                    <button
-                      type="button"
-                      onClick={openResumeModal}
-                      className="text-primary hover:underline cursor-pointer bg-transparent border-0 p-0 font-medium inline"
+                    <Link
+                      to="/jobseeker"
+                      className="text-primary hover:underline cursor-pointer font-medium inline"
                     >
                       Submit your resume
-                    </button>{' '}
+                    </Link>{' '}
                     or{' '}
                     <Link className="text-primary hover:underline font-medium" to="/contact-us">
                       contact us

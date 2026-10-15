@@ -333,21 +333,22 @@ export default function Home() {
                 </p>
 
                 <div className="flex flex-col gap-4 md:flex-row">
-                  <a
-                    aria-label="Contact Us"
+                  <Link
+                    aria-label="Find Work"
                     className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow-sm hover:bg-primary/90 h-9 px-4 py-2"
-                    href="/jobs"
+                    to="/jobseeker"
                   >
                     Find Work &rarr;
                     <span className="sr-only">Find Work &rarr;</span>
-                  </a> <a
-                    aria-label="Contact Us"
+                  </Link>
+                  <Link
+                    aria-label="Hire Talent"
                     className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/90 h-9 px-4 py-2"
-                    href="/jobs"
+                    to="/jobseeker"
                   >
                     Hire Talent &rarr;
                     <span className="sr-only">Hire Talent &rarr;</span>
-                  </a>
+                  </Link>
                 </div>
 
                 {/* Embedded Submit Resume Section (#submit-resume) */}
@@ -898,11 +899,10 @@ export default function Home() {
                               setExpandedQuote(false);
                               setCurrentReviewIdx(idx);
                             }}
-                            className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
-                              idx === currentReviewIdx
-                                ? 'w-8 bg-primary shadow-2xs'
-                                : 'w-2.5 bg-slate-200 hover:bg-slate-300'
-                            }`}
+                            className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${idx === currentReviewIdx
+                              ? 'w-8 bg-primary shadow-2xs'
+                              : 'w-2.5 bg-slate-200 hover:bg-slate-300'
+                              }`}
                             aria-label={`Go to testimonial ${idx + 1}`}
                           />
                         ))}

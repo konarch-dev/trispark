@@ -21,6 +21,7 @@ import BlogDetail from './pages/BlogDetail';
 import Insights from './pages/Insights';
 import InsightDetail from './pages/InsightDetail';
 import Jobs from './pages/Jobs';
+import JobSeeker from './pages/JobSeeker';
 import ContactUs from './pages/ContactUs';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsConditions from './pages/TermsConditions';
@@ -63,6 +64,9 @@ export default function App() {
               <Route path="/blogs" element={<Navigate to="/insights" replace />} />
               <Route path="/blogs/:slug" element={<BlogDetail />} />
               <Route path="/jobs" element={<Jobs />} />
+              <Route path="/jobseeker" element={<JobSeeker />} />
+              <Route path="/job-seeker" element={<JobSeeker />} />
+              <Route path="/job-seekers" element={<JobSeeker />} />
               <Route path="/contact-us" element={<ContactUs />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/terms-and-conditions" element={<TermsConditions />} />

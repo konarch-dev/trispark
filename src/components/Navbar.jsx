@@ -18,6 +18,7 @@ const NAV_ITEMS = [
   { title: 'Industries', url: '/industries' },
   { title: 'Insights', url: '/insights' },
   { title: 'Jobs', url: '/jobs' },
+  { title: 'Job Seekers', url: '/jobseeker' },
   { title: 'About Us', url: '/about-us' },
   { title: 'Contact Us', url: '/contact-us' },
 ];
@@ -37,7 +38,9 @@ export default function Navbar() {
     NAV_ITEMS.forEach((item) => {
       if (item.submenu) {
         const matchesChild = item.submenu.some((sub) => location.pathname === sub.url);
-        const matchesParent = item.url && location.pathname.startsWith(item.url);
+        const matchesParent =
+          item.url &&
+          (location.pathname === item.url || location.pathname.startsWith(`${item.url}/`));
         if (matchesChild || matchesParent) {
           setOpenSubmenus((prev) => ({ ...prev, [item.title]: true }));
         }
@@ -66,7 +69,14 @@ export default function Navbar() {
   const isCurrent = (path) => {
     if (!path) return false;
     if (path === '/') return location.pathname === '/';
-    return location.pathname.startsWith(path);
+    if (path === '/jobseeker') {
+      return (
+        location.pathname === '/jobseeker' ||
+        location.pathname === '/job-seeker' ||
+        location.pathname === '/job-seekers'
+      );
+    }
+    return location.pathname === path || location.pathname.startsWith(`${path}/`);
   };
 
   const linkClass = (path) =>
@@ -97,7 +107,9 @@ export default function Navbar() {
                   {NAV_ITEMS.map((item) => {
                     if (item.submenu) {
                       const isParentActive =
-                        (item.url && location.pathname.startsWith(item.url)) ||
+                        (item.url &&
+                          (location.pathname === item.url ||
+                            location.pathname.startsWith(`${item.url}/`))) ||
                         item.submenu.some((sub) => location.pathname === sub.url);
 
                       return (
@@ -239,7 +251,9 @@ export default function Navbar() {
             if (item.submenu) {
               const isOpen = !!openSubmenus[item.title];
               const isParentActive =
-                (item.url && location.pathname.startsWith(item.url)) ||
+                (item.url &&
+                  (location.pathname === item.url ||
+                    location.pathname.startsWith(`${item.url}/`))) ||
                 item.submenu.some((sub) => location.pathname === sub.url);
 
               return (

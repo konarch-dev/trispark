@@ -322,17 +322,17 @@ export default function ServiceDetail() {
                     </div>
 
                     {/* Bottom Action Card */}
-                    <div className="rounded-2xl bg-linear-to-r from-blue-900 to-indigo-950 p-6 sm:p-8 text-white space-y-4">
-                      <h3 className="font-serif text-2xl font-bold">
+                    <div className="service-bottom-cta">
+                      <h3>
                         Build the Workforce Your Business Needs
                       </h3>
-                      <p className="text-slate-200 text-sm sm:text-base leading-relaxed max-w-2xl">
+                      <p>
                         Tell us about the roles you need to fill, the skills required, and your expected timeline.
                       </p>
-                      <div className="pt-2">
+                      <div>
                         <Link
                           to="/contact-us"
-                          className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow-sm transition-all hover:bg-slate-100 hover:shadow-md cursor-pointer"
+                          className="btn-gold"
                         >
                           <span>Request Contract Staffing</span>
                           <span aria-hidden="true">&rarr;</span>
@@ -634,17 +634,17 @@ export default function ServiceDetail() {
                     </div>
 
                     {/* Bottom Action Card */}
-                    <div className="rounded-2xl bg-linear-to-r from-blue-900 to-indigo-950 p-6 sm:p-8 text-white space-y-4">
-                      <h3 className="font-serif text-2xl font-bold">
+                    <div className="service-bottom-cta">
+                      <h3>
                         Build Your Long-Term Team
                       </h3>
-                      <p className="text-slate-200 text-sm sm:text-base leading-relaxed max-w-2xl">
+                      <p>
                         Tell us about the positions you need to fill, the skills required, and your hiring timeline.
                       </p>
-                      <div className="pt-2">
+                      <div>
                         <Link
                           to="/contact-us"
-                          className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow-sm transition-all hover:bg-slate-100 hover:shadow-md cursor-pointer"
+                          className="btn-gold"
                         >
                           <span>Request Permanent Staffing</span>
                           <span aria-hidden="true">&rarr;</span>
@@ -946,17 +946,17 @@ export default function ServiceDetail() {
                     </div>
 
                     {/* Bottom Action Card */}
-                    <div className="rounded-2xl bg-linear-to-r from-blue-900 to-indigo-950 p-6 sm:p-8 text-white space-y-4">
-                      <h3 className="font-serif text-2xl font-bold">
+                    <div className="service-bottom-cta">
+                      <h3>
                         Find Your Next Leader
                       </h3>
-                      <p className="text-slate-200 text-sm sm:text-base leading-relaxed max-w-2xl">
+                      <p>
                         Tell us about the leadership position, experience required, and business objectives behind the hire.
                       </p>
-                      <div className="pt-2">
+                      <div>
                         <Link
                           to="/contact-us"
-                          className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow-sm transition-all hover:bg-slate-100 hover:shadow-md cursor-pointer"
+                          className="btn-gold"
                         >
                           <span>Request Executive Search</span>
                           <span aria-hidden="true">&rarr;</span>
@@ -1258,17 +1258,17 @@ export default function ServiceDetail() {
                     </div>
 
                     {/* Bottom Action Card */}
-                    <div className="rounded-2xl bg-linear-to-r from-blue-900 to-indigo-950 p-6 sm:p-8 text-white space-y-4">
-                      <h3 className="font-serif text-2xl font-bold">
+                    <div className="service-bottom-cta">
+                      <h3>
                         Build Smarter Operations
                       </h3>
-                      <p className="text-slate-200 text-sm sm:text-base leading-relaxed max-w-2xl">
+                      <p>
                         Tell us which workflows, agents, or AI initiatives you want to explore, and we will help you plan the right path.
                       </p>
-                      <div className="pt-2">
+                      <div>
                         <Link
                           to="/contact-us"
-                          className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow-sm transition-all hover:bg-slate-100 hover:shadow-md cursor-pointer"
+                          className="btn-gold"
                         >
                           <span>Request an AI Consultation</span>
                           <span aria-hidden="true">&rarr;</span>

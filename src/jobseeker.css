@@ -1,0 +1,1114 @@
+/* ===================================================================
+   TRISPARK JOB SEEKER & LEAD FORM STYLING
+   Authentic design system matching staging.trisparkinc.com
+   =================================================================== */
+
+:root {
+  --c-blue: #1f9ede;
+  --c-blue-dark: #0b6ba6;
+  --c-blue-light: #6fc2ef;
+  --c-purple: #8e2d8c;
+  --c-purple-light: #d99bd8;
+  --c-amber: #f2a93b;
+  --c-amber-light: #f6c67a;
+  --c-gold: #f5c451;
+  --c-navy: #0b2436;
+  --c-navy-deep: #081b29;
+  --c-bg: #eef1f4;
+  --c-white: #ffffff;
+  --c-text: #12242e;
+  --c-text-soft: #4b6272;
+  --c-text-softer: #5b6f7c;
+  --c-text-faint: #7a8d99;
+  --c-border: #dfe7ed;
+  --c-border-soft: #e3ebf1;
+  --c-border-input: #d3dde4;
+}
+
+/* -------------------------------------------------------------------
+   1. HERO SECTION (.jsk-hero)
+   ------------------------------------------------------------------- */
+.jsk-hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #081b29 0%, #0b2436 100%);
+  color: #ffffff;
+  padding: 80px 24px 72px;
+}
+
+.jsk-hero__glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(40% 60% at 85% 15%, rgba(31, 158, 222, 0.45) 0%, transparent 70%),
+    radial-gradient(35% 55% at 15% 85%, rgba(142, 45, 140, 0.4) 0%, transparent 70%),
+    radial-gradient(25% 40% at 50% 10%, rgba(242, 169, 59, 0.25) 0%, transparent 70%);
+  opacity: 0.85;
+}
+
+.jsk-hero__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+}
+
+.jsk-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  font-size: 13px;
+  font-weight: 600;
+  color: #6fc2ef;
+  letter-spacing: 0.02em;
+}
+
+.jsk-badge__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #38bdf8;
+  box-shadow: 0 0 10px #38bdf8;
+}
+
+.jsk-hero h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 5.5vw, 58px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin: 0;
+  max-width: 840px;
+}
+
+.jsk-hero .accent-gradient {
+  background: linear-gradient(135deg, #38bdf8 0%, #60a5fa 50%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.jsk-hero__subtitle {
+  font-size: clamp(16px, 2vw, 19px);
+  line-height: 1.65;
+  color: #cbd5e1;
+  max-width: 680px;
+  margin: 0;
+}
+
+.jsk-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.jsk-btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 12px;
+  background: #f5c451;
+  color: #2f2204;
+  font-size: 15.5px;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 10px 24px rgba(245, 196, 81, 0.35);
+}
+
+.jsk-btn-gold:hover {
+  background: #0b6ba6;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(11, 107, 166, 0.35);
+}
+
+.jsk-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 26px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  font-size: 15.5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.jsk-btn-outline:hover {
+  background: #ffffff;
+  color: #0b2436;
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Stat Grid */
+.jsk-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 24px;
+}
+
+.jsk-stat-card {
+  padding: 18px 20px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  text-align: left;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.jsk-stat-card:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.jsk-stat-num {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.jsk-stat-label {
+  font-size: 13px;
+  color: #94a3b8;
+  line-height: 1.4;
+}
+
+/* -------------------------------------------------------------------
+   2. CORE LEAD FORM SECTION (.jsk-contact)
+   ------------------------------------------------------------------- */
+.jsk-contact {
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 88px 24px;
+}
+
+.jsk-contact__wrap {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.jsk-contact__head {
+  text-align: center;
+}
+
+.jsk-contact__head h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(30px, 4vw, 42px);
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 12px;
+}
+
+.jsk-contact__head p {
+  font-size: 17px;
+  color: #475569;
+  max-width: 580px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+/* Lead Form Card */
+.jsk-lead-form {
+  background: #ffffff;
+  border: 1px solid #d3dde4;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 2px 4px rgba(18, 36, 46, 0.04), 0 20px 48px -18px rgba(18, 36, 46, 0.12);
+  border-top: 4px solid var(--c-purple);
+  transition: border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.jsk-lead-form.is-employer {
+  border-top-color: var(--c-blue);
+}
+
+/* Sliding Tabs */
+.jsk-form-tabs {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5px;
+  border-radius: 14px;
+  background: #f1f5f9;
+  user-select: none;
+}
+
+.jsk-form-tabs__thumb {
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 5px;
+  width: calc(50% - 5px);
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(18, 36, 46, 0.1);
+  transition: transform 0.35s cubic-bezier(0.6, 0, 0.2, 1);
+}
+
+.jsk-lead-form.is-seeker .jsk-form-tabs__thumb {
+  transform: translateX(0%);
+}
+
+.jsk-lead-form.is-employer .jsk-form-tabs__thumb {
+  transform: translateX(100%);
+}
+
+.jsk-form-tabs button {
+  position: relative;
+  z-index: 2;
+  height: 50px;
+  border: 0;
+  background: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+
+.jsk-form-tabs button.is-inactive {
+  color: #64748b;
+}
+
+.jsk-form-tabs button .tab-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.jsk-form-tabs button .tab-dot--seeker {
+  background: var(--c-purple);
+}
+
+.jsk-form-tabs button .tab-dot--employer {
+  background: var(--c-blue);
+}
+
+.jsk-lead-form__desc {
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: #334155;
+  margin: 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f1f5f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.jsk-required-note {
+  font-size: 12.5px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.jsk-required-note .req {
+  color: #e11d48;
+}
+
+/* Form Fields */
+.jsk-fields-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.jsk-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.jsk-field.span-full {
+  grid-column: 1 / -1;
+}
+
+.jsk-field label {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.jsk-field label .req {
+  color: #e11d48;
+}
+
+.jsk-field label .hint {
+  font-size: 12px;
+  font-weight: 400;
+  color: #64748b;
+}
+
+.jsk-input,
+.jsk-select,
+.jsk-textarea {
+  height: 48px;
+  padding: 0 16px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  font-size: 15px;
+  color: #0f172a;
+  outline: none;
+  transition: all 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.jsk-textarea {
+  height: auto;
+  min-height: 100px;
+  padding: 12px 16px;
+  resize: vertical;
+}
+
+.jsk-input:focus,
+.jsk-select:focus,
+.jsk-textarea:focus {
+  border-color: var(--c-purple);
+  box-shadow: 0 0 0 3px rgba(142, 45, 140, 0.15);
+}
+
+.jsk-lead-form.is-employer .jsk-input:focus,
+.jsk-lead-form.is-employer .jsk-select:focus,
+.jsk-lead-form.is-employer .jsk-textarea:focus {
+  border-color: var(--c-blue);
+  box-shadow: 0 0 0 3px rgba(31, 158, 222, 0.15);
+}
+
+.jsk-select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 40px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23475569' stroke-width='1.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+}
+
+/* File Upload Component */
+.jsk-file-box {
+  position: relative;
+  min-height: 52px;
+  padding: 6px 8px 6px 16px;
+  border-radius: 10px;
+  border: 1.5px dashed #cbd5e1;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.jsk-file-box:hover {
+  border-color: var(--c-purple);
+  background: #faf5ff;
+}
+
+.jsk-file-box.has-file {
+  border-color: #10b981;
+  background: #f0fdf4;
+}
+
+.jsk-file-box__info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.jsk-file-box__name {
+  font-size: 14.5px;
+  color: #475569;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+
+.jsk-file-box.has-file .jsk-file-box__name {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.jsk-file-box__btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: #e2e8f0;
+  color: #0f172a;
+  font-size: 13.5px;
+  font-weight: 600;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.jsk-file-box input[type="file"] {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Consents & Disclaimers */
+.jsk-consent-group {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 16px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.jsk-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 12.5px;
+  color: #475569;
+  line-height: 1.55;
+  cursor: pointer;
+}
+
+.jsk-checkbox-label input[type="checkbox"] {
+  margin-top: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1px solid #cbd5e1;
+  accent-color: var(--c-purple);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.jsk-checkbox-label a {
+  color: var(--c-purple);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* Submit Button */
+.jsk-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 32px;
+  border-radius: 12px;
+  border: 0;
+  background: var(--c-purple);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  align-self: flex-start;
+  box-shadow: 0 4px 14px rgba(142, 45, 140, 0.25);
+}
+
+.jsk-lead-form.is-employer .jsk-submit-btn {
+  background: var(--c-blue-dark);
+  box-shadow: 0 4px 14px rgba(11, 107, 166, 0.25);
+}
+
+.jsk-submit-btn:hover {
+  background: var(--c-navy);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(11, 36, 54, 0.25);
+}
+
+.jsk-submit-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Success Card */
+.jsk-success-card {
+  text-align: center;
+  padding: 48px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.jsk-success-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #dcfce7;
+  color: #15803d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.jsk-success-card h3 {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.jsk-success-card p {
+  font-size: 15px;
+  color: #475569;
+  max-width: 480px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* -------------------------------------------------------------------
+   3. PROCESS SECTION (.jsk-process)
+   ------------------------------------------------------------------- */
+.jsk-process {
+  background: #f8fafc;
+  padding: 96px 24px;
+}
+
+.jsk-process__wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.jsk-section-head {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.jsk-section-eyebrow {
+  font-size: 12.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--c-blue-dark);
+  margin-bottom: 8px;
+}
+
+.jsk-section-head h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 12px;
+}
+
+.jsk-section-head p {
+  font-size: 16px;
+  color: #64748b;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.jsk-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.jsk-process-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(11, 36, 54, 0.03);
+}
+
+.jsk-process-card:hover {
+  transform: translateY(-4px);
+  border-color: #cbd5e1;
+  box-shadow: 0 12px 24px -6px rgba(11, 36, 54, 0.08);
+}
+
+.jsk-process-num {
+  font-family: var(--font-serif);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.jsk-process-card h3 {
+  font-family: var(--font-serif);
+  font-size: 19px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.jsk-process-card p {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* -------------------------------------------------------------------
+   4. INDUSTRIES GRID (.jsk-industries)
+   ------------------------------------------------------------------- */
+.jsk-industries {
+  background: #ffffff;
+  padding: 96px 24px;
+}
+
+.jsk-industries__wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.jsk-industries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.jsk-industry-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.25s ease;
+}
+
+.jsk-industry-card:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px -6px rgba(11, 36, 54, 0.08);
+}
+
+.jsk-industry-card__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.jsk-industry-card__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.jsk-industry-card h3 {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.jsk-industry-card p {
+  font-size: 13.5px;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.jsk-industry-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--c-blue-dark);
+  text-decoration: none;
+  margin-top: 6px;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.jsk-industry-card__link:hover {
+  color: var(--c-purple);
+  gap: 10px;
+}
+
+/* -------------------------------------------------------------------
+   5. CANDIDATE TESTIMONIAL (.jsk-testimonial)
+   ------------------------------------------------------------------- */
+.jsk-testimonial {
+  background: var(--c-navy);
+  color: #ffffff;
+  padding: 88px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.jsk-testimonial__glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(60% 90% at 0% 100%, rgba(142, 45, 140, 0.42) 0%, transparent 70%),
+    radial-gradient(50% 70% at 100% 0%, rgba(31, 158, 222, 0.28) 0%, transparent 70%);
+}
+
+.jsk-testimonial__wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.jsk-testimonial-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 48px;
+  position: relative;
+  box-shadow: 0 20px 48px -12px rgba(0, 0, 0, 0.3);
+}
+
+.jsk-testimonial-mark {
+  font-family: var(--font-serif);
+  font-size: 80px;
+  line-height: 0.6;
+  font-weight: 700;
+  color: var(--c-purple-light);
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.jsk-testimonial-quote {
+  font-size: clamp(18px, 2.5vw, 24px);
+  line-height: 1.6;
+  font-weight: 500;
+  color: #f1f5f9;
+  font-style: italic;
+  margin: 0 0 36px;
+}
+
+.jsk-testimonial-author {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.jsk-author-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.jsk-author-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--c-purple);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(142, 45, 140, 0.4);
+}
+
+.jsk-author-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.jsk-author-role {
+  font-size: 13.5px;
+  color: #94a3b8;
+  margin: 2px 0 0;
+}
+
+.jsk-placement-tag {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #6fc2ef;
+}
+
+/* -------------------------------------------------------------------
+   6. FAQ SECTION (.jsk-faq)
+   ------------------------------------------------------------------- */
+.jsk-faq {
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 96px 24px;
+}
+
+.jsk-faq__wrap {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.jsk-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 48px;
+}
+
+.jsk-faq-item {
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.jsk-faq-item.is-open {
+  border-color: var(--c-blue);
+  box-shadow: 0 4px 16px rgba(31, 158, 222, 0.08);
+}
+
+.jsk-faq-q {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 24px;
+  border: 0;
+  background: none;
+  text-align: left;
+  color: #0f172a;
+  font-size: 16.5px;
+  font-weight: 600;
+  line-height: 1.45;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.jsk-faq-q:hover {
+  background: #f8fafc;
+}
+
+.jsk-faq-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.jsk-faq-item.is-open .jsk-faq-icon {
+  background: var(--c-blue);
+  color: #ffffff;
+  transform: rotate(180deg);
+}
+
+.jsk-faq-a {
+  padding: 0 24px 22px 24px;
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: #475569;
+  margin: 0;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 14px;
+}
+
+.jsk-faq-footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 15px;
+  color: #64748b;
+}
+
+.jsk-faq-footer a {
+  color: var(--c-blue-dark);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* -------------------------------------------------------------------
+   7. FINAL CTA BANNER (.jsk-final-cta)
+   ------------------------------------------------------------------- */
+.jsk-final-cta {
+  background: var(--c-navy-deep);
+  color: #ffffff;
+  padding: 88px 24px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.jsk-final-cta__glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(40% 70% at 20% 100%, rgba(142, 45, 140, 0.35) 0%, transparent 70%),
+    radial-gradient(40% 70% at 80% 0%, rgba(31, 158, 222, 0.35) 0%, transparent 70%);
+}
+
+.jsk-final-cta__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.jsk-final-cta h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 4.5vw, 42px);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.jsk-final-cta p {
+  font-size: clamp(16px, 2vw, 18px);
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin: 0 0 12px;
+}
+
+.jsk-final-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+/* -------------------------------------------------------------------
+   RESPONSIVE MEDIA QUERIES
+   ------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .jsk-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .jsk-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .jsk-industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .jsk-hero {
+    padding: 64px 16px 56px;
+  }
+  .jsk-lead-form {
+    padding: 24px 20px;
+    gap: 20px;
+  }
+  .jsk-form-tabs button {
+    font-size: 13.5px;
+    gap: 6px;
+    height: 44px;
+  }
+  .jsk-fields-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .jsk-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .jsk-process-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .jsk-industries-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .jsk-testimonial-card {
+    padding: 32px 20px;
+  }
+  .jsk-testimonial-quote {
+    font-size: 17px;
+  }
+  .jsk-submit-btn {
+    width: 100%;
+  }
+  .jsk-hero__actions,
+  .jsk-final-cta__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .jsk-btn-gold,
+  .jsk-btn-outline {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -84,6 +84,7 @@ export default function Footer() {
                     <li><Link className="text-muted-foreground hover:text-primary transition" to="/industries">Industries</Link></li>
                     <li><Link className="text-muted-foreground hover:text-primary transition" to="/insights">Insights</Link></li>
                     <li><Link className="text-muted-foreground hover:text-primary transition" to="/jobs">Jobs</Link></li>
+                    <li><Link className="text-muted-foreground hover:text-primary transition" to="/jobseeker">Job Seekers</Link></li>
                     <li><Link className="text-muted-foreground hover:text-primary transition" to="/about-us">About Us</Link></li>
                     <li><Link className="text-muted-foreground hover:text-primary transition" to="/contact-us">Contact Us</Link></li>
                   </ul>
